@@ -174,29 +174,6 @@ Importing or listing the registry does not import Torch and does not access the 
 - Cross-axis analysis uses Spearman correlation, endpoint bootstrap intervals, endpoint-label permutations, Holm correction, Kendall sensitivity, leave-one-endpoint-out analysis, and descriptive leave-one-family-out analysis.
 - Latency and CUDA memory are hardware- and environment-specific and should only be compared under a matched protocol.
 
-## Repository Hygiene
-
-The following are ignored by Git:
-
-- `data/`
-- `outputs/`
-- model checkpoints and NumPy arrays
-- videos
-- local configuration files
-- virtual environments, caches, and build metadata
-
-Before publishing, verify with:
-
-```powershell
-git status --short
-git ls-files | Select-String -Pattern '\.(npy|npz|pt|pth|ckpt|csv|png|pdf|docx)$'
-```
-
-```bash
-git status --short
-git ls-files | grep -E '\.(npy|npz|pt|pth|ckpt|csv|png|pdf|docx)$' || true
-```
-
 ## License
 
 Repository code is MIT licensed. Model weights, datasets, stimulus videos, and EEG recordings remain subject to their original licenses and access restrictions.
