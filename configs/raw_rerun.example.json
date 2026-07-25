@@ -1,0 +1,40 @@
+{
+  "base_dir": "..",
+  "eeg_matrix": "data/external/eeg_matrix.npy",
+  "video_ids": "data/external/video_ids.npy",
+  "feature_manifest": "data/external/feature_clips.csv",
+  "stimulus_metadata": "data/external/stimulus_metadata.csv",
+  "model_rdm_root": "outputs/model_rdms",
+  "classification_manifest": "data/external/classification_clips.csv",
+  "alias_manifest": "data/external/model_aliases.csv",
+  "output_root": "outputs/full",
+  "models": [
+    "R3D_18", "MC3_18", "R2Plus1D_18", "S3D", "MViT_V1_B", "MViT_V2_S",
+    "Swin3D_T", "Swin3D_S", "Swin3D_B", "SlowFast_R50", "SlowFast_R101",
+    "Slow_R50", "I3D_R50", "X3D_S", "X3D_M", "R2Plus1D_R50", "C2D_R50",
+    "CSN_R101", "TimeSformer_K400_HF", "TimeSformer_HR_K400_HF",
+    "ViViT_B_K400_HF", "XCLIP_Base_P32_HF", "VideoPrism_Base_F16_HF",
+    "VJEPA2_ViT_L_FPC64_HF", "VideoMAE_Base_K400_HF", "VideoMAE_Large_K400_HF",
+    "VideoMAE_Base_Pretrain_Local"
+  ],
+  "model_options": {
+    "VideoMAE_Base_Pretrain_Local": {
+      "videomae_repo": "external/VideoMAE",
+      "checkpoint": "external/checkpoints/VideoMAE.pth"
+    }
+  },
+  "participant_count": null,
+  "time_start_ms": -200,
+  "time_end_ms": 3400,
+  "epoch_ms": [0, 3000],
+  "onset_epoch_ms": [-200, 800],
+  "onset_neighborhood_samples": 5,
+  "warmup": 3,
+  "repeats": 10,
+  "benchmark_seed": 123,
+  "permutations": 10000,
+  "bootstraps": 2000,
+  "cross_axis_bootstraps": 10000,
+  "cross_axis_permutations": 20000,
+  "seed": 20260720
+}
